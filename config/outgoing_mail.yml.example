@@ -17,14 +17,16 @@ test:
   delivery_method: "test"
 
 production:
-  address: "smtp.example.com"
-  port: "25"
-  user_name: "user"
-  password: "password"
+  delivery_method: "smtp"
+  address: "smtp.gmail.com"
+  enable_starttls_auto: true
+  port: "587"
+  user_name: "tarcinrobotics301@gmail.com"
+  password: "tsixqrlycpmpxgck"
   authentication: "plain" # plain, login, or cram_md5
-  domain: "example.com"
-  outgoing_address: "canvas@example.com"
-  default_name: "Instructure Canvas"
+  domain: "localhost"
+  outgoing_address: "tarcinrobotics301@gmail.com"
+  default_name: "Tarcin Admin"
 
 # If receiving mail from multiple inboxes (see incoming_mail.yml.example),
 # you'll want to include those addresses in a reply_to_addresses array so
