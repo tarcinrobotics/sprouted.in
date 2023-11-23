@@ -193,7 +193,7 @@
                                               :value => @account.settings[:trusted_referers],
                                               :class => 'same-width-as-select',
                                               :placeholder => "https://example.edu" %>
-                      <p class="aside"><%= t("This is a comma separated list of URL's to trust.  Trusting any URL's in this list will bypass the CSRF token when logging in to Canvas.") %></p>
+                      <p class="aside"><%= t("This is a comma separated list of URL's to trust.  Trusting any URL's in this list will bypass the CSRF token when logging in to SproutED.") %></p>
                     </td>
                   </tr>
 
@@ -391,7 +391,7 @@
                   <tr>
                     <td colspan="2">
                       <%= r.check_box :value, checked: hash[:value], disabled: disabled %>
-                      <%= r.label :value, t("Disable uploads to Canvas Media from the enhanced rich content editor") %>
+                      <%= r.label :value, t("Disable uploads to SproutED Media from the enhanced rich content editor") %>
                     </td>
                   </tr>
                 <% end %>
@@ -445,7 +445,7 @@
               <%= settings.label :can_add_pronouns, en: "Enable Personal Pronouns" %>
               <div id="personal_pronouns_options" <%= hidden(true) unless @account.settings[:can_add_pronouns] %>>
                 <%= settings.check_box :can_change_pronouns, :checked => @account.can_change_pronouns? %>
-                <%= settings.label :can_change_pronouns, en: "Allow users to change their pronouns in Canvas" %>
+                <%= settings.label :can_change_pronouns, en: "Allow users to change their pronouns in SproutED" %>
                 <% js_env(PRONOUNS_LIST: ((@account.pronouns.presence || Pronouns.default_pronouns)))
                 js_bundle :available_pronouns_list %>
               </div>
@@ -553,23 +553,23 @@
               <% disabled = k5_settings[:locked] && k5_settings[:inherited] %>
               <%= settings.fields_for :enable_as_k5_account do |k5| %>
                 <%= k5.check_box :value, :checked => k5_settings[:value], :disabled => disabled %>
-                <%= k5.label :value, t("Canvas for Elementary") %>
+                <%= k5.label :value, t("SproutED for Elementary") %>
               <% end %>
               <div id="k5_account_warning_message" class="account_settings__k5-help-text">
                 <i class='icon-warning-borderless'></i>
                 <div class="account_settings__k5-help-text-container">
                   <p>
-                    <%= t ("This setting significantly changes the Canvas experience for students and teachers.")%>
+                    <%= t ("This setting significantly changes the SproutED experience for students and teachers.")%>
                   </p>
                   <p>
                     <%= t do %>
-                      To learn more about Canvas for Elementary, please refer to <a href="<%= t(:'#community.canvas_for_elementary') %>" target="_blank">our documentation</a>.
+                      To learn more about SproutED for Elementary, please refer to <a href="<%= t(:'#community.canvas_for_elementary') %>" target="_blank">our documentation</a>.
                     <% end %>
                   </p>
                   <% font_settings = @account.use_classic_font_in_k5 %>
                   <%= settings.fields_for :use_classic_font_in_k5 do |font| %>
                     <div>
-                      <span class="screenreader-only"><%= t('Canvas for Elementary Font Selection') %></span>
+                      <span class="screenreader-only"><%= t('SproutED for Elementary Font Selection') %></span>
                       <%= font.radio_button :value, false, checked: !font_settings[:value], disabled: disabled, id: "k5_font_disabled_radio" %>
                       <%= font.label :value, t("Large Balsamiq Font"), for: "k5_font_disabled_radio", style: "margin-bottom: 0;" %>
                       <br />
@@ -632,7 +632,7 @@
                   <%= settings.label :global_includes, :en => "Custom CSS/JavaScript overrides" %>
                   <div id="global_includes_warning_message" class="account_settings__help-text">
                     <p>
-                      <%= t ("Custom CSS and Javascript may cause accessibility issues or conflicts with future Canvas updates!")%>
+                      <%= t ("Custom CSS and Javascript may cause accessibility issues or conflicts with future SproutED updates!")%>
                     </p>
                     <p>
                       <%= t do %>
@@ -651,7 +651,7 @@
                 </div>
                 <div>
                   <%= settings.check_box :limit_parent_app_web_access, :checked => @account.settings[:limit_parent_app_web_access] %>
-                  <%= settings.label :limit_parent_app_web_access, :en => "Limit access to Canvas web from the Canvas Parent app" %>
+                  <%= settings.label :limit_parent_app_web_access, :en => "Limit access to SproutED web from the SproutED Parent app" %>
                 </div>
               <% end %>
               <%# end of :manage_site_settings %>
@@ -879,11 +879,11 @@
               <div class="service_help_dialog" title="<%= t(:about_google_docs_tooltip, "About Google Docs Previews") %>" id="google_docs_previews_help_dialog">
                 <%= mt(:about_google_docs, <<~TEXT, :terms_url => "https://docs.google.com/viewer/TOS")
 Google Docs Previews allow users to view documents from
-within Canvas, rather than having to download them and
+within SproutED, rather than having to download them and
 open the corresponding program (e.g. Word or Excel).
 
 Google Docs Previews can also render file types
-not supported by the Canvas document previewer.
+not supported by the SproutED document previewer.
 
 By using this service you
 acknowledge that you have read and agreed to the
@@ -1037,7 +1037,7 @@ acknowledge that you have read and agreed to the
     <div id="tab-notifications">
       <%= form_for :account, :url => account_url(@account), :html => {:method => :put, :id => "account_settings_notifications"} do |f| %>
         <h2><%= t(:email_notification_from_settings, 'E-mail Notification "From" Settings') %></h2>
-        <p><%= t(:email_notification_from_description, "This setting allows the Admin to brand or label the 'From' text on all notifications sent from Canvas for this Account.") %></p>
+        <p><%= t(:email_notification_from_description, "This setting allows the Admin to brand or label the 'From' text on all notifications sent from SproutED for this Account.") %></p>
         <%= f.fields_for :settings do |settings| %>
           <div>
             <%= settings.radio_button :outgoing_email_default_name_option, 'default',
@@ -1055,7 +1055,7 @@ acknowledge that you have read and agreed to the
               </tr>
               <tr>
                 <td><%= t 'notifications.subject', 'Subject' %></td>
-                <td><%= t 'notifications.sample_subject', 'Recent Canvas Notifications' %></td>
+                <td><%= t 'notifications.sample_subject', 'Recent SproutED Notifications' %></td>
               </tr>
               <tr>
                 <td><%= t 'notifications.email_date', 'Date' %></td>
@@ -1080,7 +1080,7 @@ acknowledge that you have read and agreed to the
           </div>
           <div style='padding-<%= direction('left') %>: 2em;'>
             <p>
-              <%= t('notifications.custom_name_description', 'If selected, this will replace all other branding sent in Canvas notifications.') %>
+              <%= t('notifications.custom_name_description', 'If selected, this will replace all other branding sent in SproutED notifications.') %>
               <br/>
               <%= settings.label :outgoing_email_default_name, :en => 'Name:' %>
               <%= text_field_tag 'account[settings][outgoing_email_default_name]', @account.settings[:outgoing_email_default_name] %>
@@ -1096,7 +1096,7 @@ acknowledge that you have read and agreed to the
               </tr>
               <tr>
                 <td><%= t 'notifications.subject', 'Subject' %></td>
-                <td><%= t 'notifications.sample_subject', 'Recent Canvas Notifications' %></td>
+                <td><%= t 'notifications.sample_subject', 'Recent SproutED Notifications' %></td>
               </tr>
               <tr>
                 <td><%= t 'notifications.email_date', 'Date' %></td>
@@ -1129,7 +1129,7 @@ acknowledge that you have read and agreed to the
             <tr>
               <td>
                 <b><%= t('notifications.external_services_warning_label', 'Pop-up Message Content:') %></b>
-                <blockquote><%= t('notifications.external_services_warning', 'Notice: Some notifications may contain confidential information. Selecting to receive notifications at an email other than your institution provided address may result in sending sensitive Canvas course and group information outside of the institutional system.')%></blockquote>
+                <blockquote><%= t('notifications.external_services_warning', 'Notice: Some notifications may contain confidential information. Selecting to receive notifications at an email other than your institution provided address may result in sending sensitive SproutED course and group information outside of the institutional system.')%></blockquote>
               </td>
             </tr>
           </table>
@@ -1232,7 +1232,7 @@ acknowledge that you have read and agreed to the
               <%= t(:interpolate_account_domain, "Enter \"{{ACCOUNT_DOMAIN}}\" to substitute the user's root account domain") %>
             </p>
             <p>
-              <%= t(:interpolate_user_id, "Enter \"{{CANVAS_USER_ID}}\" to substitute the user's unique Canvas ID") %>
+              <%= t(:interpolate_user_id, "Enter \"{{CANVAS_USER_ID}}\" to substitute the user's unique SproutED ID") %>
             </p>
           <% end %>
         </div>

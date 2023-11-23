@@ -26,7 +26,7 @@
 
 <div id="modal-box" class="ic-Login-confirmation">
   <header class="ic-Login-confirmation__header">
-    <%= image_tag("login/canvas-logo@2x.png", class:"ic-Login-confirmation__logo", alt:"Canvas by Instructure") %>
+    <%= image_tag("login/canvas-logo@2x.png", class:"ic-Login-confirmation__logo", alt:"SproutED by Tarcin") %>
   </header>
   <div class="ic-Login-confirmation__content">
   <h2 class="ic-Login-confirmation__headline"><%= t 'titles.mfa', "Multi-factor Authentication" %></h2>
@@ -37,7 +37,7 @@
       <% end %>
       <p><%=  mt('details.mfa_enrollment', <<~BODY, :secret_key => session[:pending_otp_secret_key])
 Multi-factor authentication increases security by requiring that you have something in your physical possession,
-in addition to knowing your password, in order to log in to Canvas. This can be a device that can generate
+in addition to knowing your password, in order to log in to SproutED. This can be a device that can generate
 verification codes, or a phone that can receive text messages. MFA can be configured by scanning the QR code
 below using a Time-based one-time password (TOTP) authenticator app on iPhone or Android (ex: Google Authenticator,
 Microsoft Authenticator, Authy). Other tokens can be configured by entering the secret key **%{secret_key}**.
