@@ -21,7 +21,7 @@ import React from 'react'
 import {SubjectInput} from './SubjectInput'
 
 export default {
-  title: 'Examples/Canvas Inbox/SubjectInput',
+  title: 'Examples/SproutED Inbox/SubjectInput',
   component: SubjectInput,
   argTypes: {
     value: {control: 'text'},

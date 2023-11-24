@@ -2,9 +2,9 @@
   <%= polymorphic_url([asset.assignment.context, asset.assignment, :submission], id: asset.user) %>
 <% end -%>
 <% if send_student_names(asset, user) %>
-  <%= t "Canvas Alert - Grade Change: %{date} for %{name}", :date => (datetime_string(force_zone(asset.graded_at)) rescue t(:no_date_set, "No Date Set")), name: asset.user.name %>
+  <%= t "SproutED Alert - Grade Change: %{date} for %{name}", :date => (datetime_string(force_zone(asset.graded_at)) rescue t(:no_date_set, "No Date Set")), name: asset.user.name %>
 <% else %>
-  <%= t :tweet, "Canvas Alert - Grade Change: %{date}", :date => (datetime_string(force_zone(asset.graded_at)) rescue t(:no_date_set, "No Date Set")) %>
+  <%= t :tweet, "SproutED Alert - Grade Change: %{date}", :date => (datetime_string(force_zone(asset.graded_at)) rescue t(:no_date_set, "No Date Set")) %>
 <% end %>
 
 <% if asset.score && user.try(:send_scores_in_emails?, asset.assignment.context) %>

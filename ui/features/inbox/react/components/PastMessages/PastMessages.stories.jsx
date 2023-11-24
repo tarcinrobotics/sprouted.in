@@ -20,7 +20,7 @@ import React from 'react'
 import {PastMessages} from './PastMessages'
 
 export default {
-  title: 'Examples/Canvas Inbox/Past Messages',
+  title: 'Examples/SproutED Inbox/Past Messages',
   component: PastMessages,
 }
 

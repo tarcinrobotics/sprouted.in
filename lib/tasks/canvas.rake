@@ -133,7 +133,7 @@ unless $canvas_tasks_loaded
 
     desc "Initialize vault"
     task seed_vault: [:environment] do
-      Canvas::Vault.api_client.sys.mount(Canvas::Vault.kv_mount, "kv", "Application secrets for canvas", {
+      Canvas::Vault.api_client.sys.mount(Canvas::Vault.kv_mount, "kv", "Application secrets for SproutED", {
                                            options: { version: 1 },
                                            config: {
                                              # In prod this is higher, but for dev, a low ttl is more useful

@@ -68,7 +68,7 @@ export default function ThemeEditorSidebar(props) {
               <div>
                 <p className="Theme__editor-upload-warning_text-emphasis">
                   {I18n.t(
-                    'Custom CSS and Javascript may cause accessibility issues or conflicts with future Canvas updates!'
+                    'Custom CSS and Javascript may cause accessibility issues or conflicts with future SproutED updates!'
                   )}
                 </p>
                 <p
@@ -85,7 +85,7 @@ export default function ThemeEditorSidebar(props) {
             </div>
 
             <div className="Theme__editor-upload-overrides_header">
-              {I18n.t('File(s) will be included on all pages in the Canvas desktop application.')}
+              {I18n.t('File(s) will be included on all pages in the SproutED desktop application.')}
             </div>
 
             <div className="Theme__editor-upload-overrides_form">
@@ -115,7 +115,7 @@ export default function ThemeEditorSidebar(props) {
           <div className="Theme__editor-upload-overrides">
             <div className="Theme__editor-upload-overrides_header">
               {I18n.t(
-                'File(s) will be included when user content is displayed within the Canvas iOS or Android apps, and in third-party apps built on our API.'
+                'File(s) will be included when user content is displayed within the SproutED iOS or Android apps, and in third-party apps built on our API.'
               )}
             </div>
 

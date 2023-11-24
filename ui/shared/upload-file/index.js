@@ -43,7 +43,7 @@ function fileUploadFailed(err) {
     // fault
     const wrapped = new Error(
       I18n.t(
-        'Unable to transmit file to the storage service. The service may be down or you may need to re-login to Canvas.'
+        'Unable to transmit file to the storage service. The service may be down or you may need to re-login to SproutED.'
       )
     )
     wrapped.originalError = err
@@ -54,7 +54,7 @@ function fileUploadFailed(err) {
 
 function postUploadFailed(err) {
   if (err.message === 'Network Error') {
-    const wrapped = new Error(I18n.t('Canvas failed to complete the upload.'))
+    const wrapped = new Error(I18n.t('SproutED failed to complete the upload.'))
     wrapped.originalError = err
     return Promise.reject(wrapped)
   }

@@ -20,7 +20,7 @@ import {NoSelectedConversation} from './NoSelectedConversation'
 import React from 'react'
 
 export default {
-  title: 'Examples/Canvas Inbox/No Selected Conversation',
+  title: 'Examples/SproutED Inbox/No Selected Conversation',
   component: NoSelectedConversation,
 }
 

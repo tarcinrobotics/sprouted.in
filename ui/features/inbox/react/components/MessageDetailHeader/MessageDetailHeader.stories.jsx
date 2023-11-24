@@ -21,7 +21,7 @@ import React from 'react'
 import {MessageDetailHeader} from './MessageDetailHeader'
 
 export default {
-  title: 'Examples/Canvas Inbox/MessageDetailHeader',
+  title: 'Examples/SproutED Inbox/MessageDetailHeader',
   component: MessageDetailHeader,
   argTypes: {
     onReply: {action: 'reply'},

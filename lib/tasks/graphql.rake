@@ -31,7 +31,7 @@ namespace :graphql do
   namespace :subgraph do
     def load_config(require_keys:)
       config = ConfigFile.load("subgraph_registry")
-      abort "Canvas is not configured to publish its subgraph schema" if config.blank?
+      abort "SproutED is not configured to publish its subgraph schema" if config.blank?
 
       require_keys.each do |config_key|
         abort "Config is missing #{config_key}" if config[config_key].blank?

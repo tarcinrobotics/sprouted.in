@@ -59,7 +59,7 @@
   <% @content_for_head&.each do |string| %>
     <%= string %>
   <% end %>
-  <title><%= @page_title || (yield :page_title).presence || t('default_page_title', "Canvas LMS") %></title>
+  <title><%= @page_title || (yield :page_title).presence || t('default_page_title', "SproutED") %></title>
 
   <% if fullstory_enabled_for_session?(session) %>
     <%= render :partial => "shared/fullstory_snippet" %>

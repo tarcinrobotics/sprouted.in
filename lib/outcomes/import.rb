@@ -89,7 +89,7 @@ module Outcomes
 
         if group_context.nil?
           raise InvalidDataError, I18n.t(
-            "Course with canvas id %{id} not found",
+            "Course with SproutED id %{id} not found",
             id: group[:course_id]
           )
         end
@@ -243,7 +243,7 @@ module Outcomes
           LearningOutcome.find(canvas_id)
         rescue ActiveRecord::RecordNotFound
           raise InvalidDataError, I18n.t(
-            'Outcome with canvas id "%{id}" not found',
+            'Outcome with SproutED id "%{id}" not found',
             id: outcome[:canvas_id]
           )
         end
@@ -269,7 +269,7 @@ module Outcomes
           return by_id if by_id.context == group_context
         rescue ActiveRecord::RecordNotFound
           raise InvalidDataError, I18n.t(
-            "Outcome group with canvas id %{id} not found",
+            "Outcome group with SproutED id %{id} not found",
             id: group[:canvas_id]
           )
         end

@@ -52,7 +52,7 @@ export const CanvasInboxApp = () => {
     <ApolloProvider client={client}>
       <ErrorBoundary
         errorComponent={
-          <GenericErrorPage imageUrl={errorShipUrl} errorCategory="Canvas Inbox Error Page" />
+          <GenericErrorPage imageUrl={errorShipUrl} errorCategory="SproutED Inbox Error Page" />
         }
       >
         <AlertManager>
