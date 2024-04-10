@@ -806,7 +806,9 @@ CanvasRails::Application.routes.draw do
   get "login/session_token" => "login#session_token", :as => :login_session_token
   delete "logout" => "login#destroy"
   get "logout" => "login#logout_landing"
-
+  
+  # changes for sprouted link appearance
+  
   get "login/sprouted" => "login/canvas#new", :as => :canvas_login
   post "login/canvas" => "login/canvas#create"
 
