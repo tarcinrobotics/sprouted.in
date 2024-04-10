@@ -34,7 +34,7 @@
 #         },
 #         "name": {
 #           "description": "The display name of the account",
-#           "example": "Canvas Account",
+#           "example": "SproutED Account",
 #           "type": "string"
 #         },
 #         "uuid": {
@@ -258,9 +258,9 @@
 #                 "observer",
 #                 "unenrolled"
 #               ],
-#               "text": "Search the Canvas Guides",
+#               "text": "Search the SproutED Guides",
 #               "subtext": "Find answers to common questions",
-#               "url": "https://community.canvaslms.com/t5/Guides/ct-p/guides",
+#               "url": "https://tarcin.in",
 #               "type": "default",
 #               "id": "search_the_canvas_guides",
 #               "is_featured": false,
@@ -277,7 +277,7 @@
 #                 "unenrolled"
 #               ],
 #               "text": "Report a Problem",
-#               "subtext": "If Canvas misbehaves, tell us about it",
+#               "subtext": "If SproutED misbehaves, tell us about it",
 #               "url": "#create_ticket",
 #               "type": "default",
 #               "id": "report_a_problem",
