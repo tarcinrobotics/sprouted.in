@@ -39,7 +39,7 @@ class Account::HelpLinks
       }.freeze,
       {
         available_to: %w[user student teacher admin observer unenrolled],
-        text: -> { I18n.t("#help_dialog.search_the_canvas_guides", "Search the Canvas Guides") },
+        text: -> { I18n.t("#help_dialog.search_the_canvas_guides", "Search the SproutED Guides") },
         subtext: -> { I18n.t("#help_dialog.canvas_help_sub", "Find answers to common questions") },
         url: Setting.get("help_dialog_canvas_guide_url", I18n.t(:"community.guides_home")),
         type: "default",
@@ -61,7 +61,7 @@ class Account::HelpLinks
       }.freeze,
       {
         available_to: %w[user student teacher admin observer unenrolled],
-        text: -> { I18n.t("#help_dialog.covid", "COVID-19 Canvas Resources") },
+        text: -> { I18n.t("#help_dialog.covid", "COVID-19 SproutED Resources") },
         subtext: -> { I18n.t("#help_dialog.covid_sub", "Tips for teaching and learning online") },
         url: Setting.get("help_dialog_covid_url", I18n.t(:"community.contingency_covid")),
         type: "default",
