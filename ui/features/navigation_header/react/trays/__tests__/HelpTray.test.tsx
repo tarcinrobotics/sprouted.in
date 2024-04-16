@@ -27,9 +27,9 @@ const render = (children: unknown) =>
 describe('HelpTray', () => {
   const links = [
     {
-      text: 'Search the Canvas Guides',
+      text: 'Search the SproutED Guides',
       subtext: 'Find answers to common questions',
-      url: 'https://community.canvaslms.test/t5/Canvas/ct-p/canvas',
+      url: 'https://tarcin.in',
       type: 'default',
       id: 'search_the_canvas_guides',
     },
@@ -69,7 +69,7 @@ describe('HelpTray', () => {
   it('renders help dialog links', () => {
     queryClient.setQueryData(['helpLinks'], links)
     const {getByText} = render(<HelpTray {...props} />)
-    getByText('Search the Canvas Guides')
+    getByText('Search the SproutED Guides')
     getByText('Report a Problem')
   })
 })

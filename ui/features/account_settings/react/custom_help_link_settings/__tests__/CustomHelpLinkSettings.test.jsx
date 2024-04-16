@@ -37,9 +37,9 @@ function makeProps(overrides = {}) {
     },
     {
       available_to: ['user', 'student', 'teacher', 'admin'],
-      text: 'Search the Canvas Guides',
+      text: 'Search the SproutED Guides',
       subtext: 'Find answers to common questions',
-      url: 'https://community.canvaslms.test/t5/Canvas/ct-p/canvas',
+      url: 'https://tarcin.in',
       type: 'default',
       is_featured: false,
       is_new: false,
@@ -91,7 +91,7 @@ describe('<CustomHelpLinkSettings/>', () => {
 
   it('renders links', () => {
     const {getByText} = render(<CustomHelpLinkSettings {...makeProps()} />)
-    expect(getByText('Search the Canvas Guides')).toBeInTheDocument()
+    expect(getByText('Search the SproutED Guides')).toBeInTheDocument()
   })
 
   it('puts links in editing mode', async () => {

@@ -26,9 +26,9 @@ describe('HelpLinks', () => {
     id: 'search_the_canvas_guides',
     type: 'default',
     available_to: ['user', 'student', 'teacher', 'admin', 'observer', 'unenrolled'],
-    text: 'Search the Canvas Guides',
+    text: 'Search the SproutED Guides',
     subtext: 'Find answers to common questions',
-    url: 'https://community.canvaslms.test/t5/Canvas/ct-p/canvas',
+    url: 'https://tarcin.in',
     is_featured: true,
     is_new: false,
     feature_headline: 'Little Lost? Try here first!',
@@ -88,7 +88,7 @@ describe('HelpLinks', () => {
   it('renders all the links', () => {
     const {queryByText} = render(<HelpLinks {...props} />)
     expect(queryByText('Google')).toBeInTheDocument()
-    expect(queryByText('Search the Canvas Guides')).toBeInTheDocument()
+    expect(queryByText('Search the SproutED Guides')).toBeInTheDocument()
     expect(queryByText('Report a Problem')).toBeInTheDocument()
   })
 
@@ -96,7 +96,7 @@ describe('HelpLinks', () => {
     window.ENV = {FEATURES: {featured_help_links: false}}
     const {queryByText} = render(<HelpLinks {...props} />)
     expect(queryByText('Google')).toBeInTheDocument()
-    expect(queryByText('Search the Canvas Guides')).toBeInTheDocument()
+    expect(queryByText('Search the SproutED Guides')).toBeInTheDocument()
     expect(queryByText('Report a Problem')).toBeInTheDocument()
   })
 
