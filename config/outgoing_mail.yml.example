@@ -21,12 +21,12 @@ production:
   address: "smtp.gmail.com"
   enable_starttls_auto: true
   port: "587"
-  user_name: "tarcinrobotics301@gmail.com"
-  password: "tsixqrlycpmpxgck"
+  user_name: "tarcinrobotics401@gmail.com"
+  password: "ijhb cqdv erfs ddku"
   authentication: "plain" # plain, login, or cram_md5
   domain: "localhost"
-  outgoing_address: "tarcinrobotics301@gmail.com"
-  default_name: "Tarcin Admin"
+  outgoing_address: "tarcinrobotics401@gmail.com"
+  default_name: "SproutED - Tarcin Robotic LLP"
 
 # If receiving mail from multiple inboxes (see incoming_mail.yml.example),
 # you'll want to include those addresses in a reply_to_addresses array so
